@@ -3,6 +3,8 @@ import 'package:fic4_tugas_akhir_ekatalog/data/models/request/register_model.dar
 import 'package:fic4_tugas_akhir_ekatalog/presentation/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fic4_tugas_akhir_ekatalog/themes/top_bar.dart';
+import 'package:fic4_tugas_akhir_ekatalog/themes/colors.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -35,51 +37,78 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 90,
-        title: const Text('Register',
-         style: TextStyle(
-          color: Color(0xff1f005c),
-          fontStyle: FontStyle.normal,
-          fontWeight: FontWeight.w900,
-          fontSize: 45,
-          ),
-        ),
-      ),
+      // appBar: AppBar(
+      //   toolbarHeight: 90,
+      //   title: const Text('Register',
+      //    style: TextStyle(
+      //     color: Color(0xff1f005c),
+      //     fontStyle: FontStyle.normal,
+      //     fontWeight: FontWeight.w900,
+      //     fontSize: 45,
+      //     ),
+      //   ),
+      // ),
 
-      body: Container(
-        decoration:  const BoxDecoration(
-          borderRadius: BorderRadius.only(
-            topLeft:  Radius.circular(40.0),
-            topRight: Radius.circular(40.0)
-          ),
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment(0, 3),
-            colors: <Color>[
-              Color.fromARGB(255, 13, 4, 31),
-              Color(0xff5b0060),
-              Color(0xff870160),
-              Color(0xffac255e),
-              Color(0xffca485c),
-              Color(0xffe16b5c),
-              Color(0xfff39060),
-              Color(0xffffb56b),
+      body: Stack(
+        // decoration:  const BoxDecoration(
+        //   borderRadius: BorderRadius.only(
+        //     topLeft:  Radius.circular(40.0),
+        //     topRight: Radius.circular(40.0)
+        //   ),
+        //   gradient: LinearGradient(
+        //     begin: Alignment.topLeft,
+        //     end: Alignment(0, 3),
+        //     colors: <Color>[
+        //       Colors.orange,
+        //       // Colors.yellow,
+        //       Colors.red,
+        //       // Color.fromARGB(255, 13, 4, 31),
+        //       // Color(0xff5b0060),
+        //       // Color(0xff870160),
+        //       // Color(0xffac255e),
+        //       // Color(0xffca485c),
+        //       // Color(0xffe16b5c),
+        //       // Color(0xfff39060),
+        //       // Color(0xffffb56b),
+        //     ],
+        //     tileMode: TileMode.mirror,
+
+        //   ),
+        //  ),
+        children: [
+          const Stack(
+            children: <Widget>[
+              TopBar(),
+              Positioned(
+                top: 60.0,
+                left: 20.0,
+                right: 0.0,
+                child: Row(
+                  children: <Widget> [
+                    Column(
+                      children: <Widget>[
+                        Text('Register',
+                        style: TextStyle(color: Colors.white, fontSize: 34, fontWeight:FontWeight.w900, letterSpacing: 4),),
+                      ]
+
+                    ),
+                    ],
+                ),
+                ),
             ],
-            tileMode: TileMode.mirror,
-
           ),
-         ),
-        child: Padding(
+         Padding(
+          // padding: EdgeInsets.symmetric(horizontal: 20, vertical: 120),
           padding: const EdgeInsets.all(16),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const SizedBox(height: 120),
               TextField(
-                style: const TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.black),
                 decoration: InputDecoration(
                   labelText: 'Name',
-                  labelStyle : TextStyle(color: Colors.white),
+                  labelStyle : const TextStyle(color: Colors.grey),
                   fillColor: Colors.transparent,
                   filled: true,
                   border: OutlineInputBorder(
@@ -93,7 +122,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     borderRadius: BorderRadius.circular(10.0),
                     borderSide: const BorderSide(
                       width: 2,
-                      color: Colors.white,
+                      color: Colors.orange,
                     ),
                   ),
                   ),
@@ -103,9 +132,9 @@ class _RegisterPageState extends State<RegisterPage> {
                 height: 20,
               ),
               TextField(
-                style: const TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.black),
                 decoration: InputDecoration(labelText: 'Email',
-                labelStyle : TextStyle(color: Colors.white),
+                labelStyle : const TextStyle(color: Colors.grey),
                 fillColor: Colors.transparent,
                   filled: true,
                   border: OutlineInputBorder(
@@ -119,7 +148,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     borderRadius: BorderRadius.circular(10.0),
                     borderSide: const BorderSide(
                       width: 2,
-                      color: Colors.white,
+                      color: Colors.orange,
                     ),
                   ),
                 ),
@@ -129,10 +158,10 @@ class _RegisterPageState extends State<RegisterPage> {
                 height: 20,
               ),
               TextField(
-                style: const TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.black),
                 obscureText: true,
                 decoration: InputDecoration(labelText: 'Password',
-                labelStyle : TextStyle(color: Colors.white),
+                labelStyle : const TextStyle(color: Colors.grey),
                 fillColor: Colors.transparent,
                   filled: true,
                   border: OutlineInputBorder(
@@ -146,7 +175,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     borderRadius: BorderRadius.circular(10.0),
                     borderSide: const BorderSide(
                       width: 2,
-                      color: Colors.white,
+                      color: Colors.orange,
                     ),
                   ),
                 ),
@@ -193,7 +222,7 @@ class _RegisterPageState extends State<RegisterPage> {
                           .add(SaveRegisterEvent(request: requestModel));
                     },
                     style: ElevatedButton.styleFrom(
-                        primary: Colors.pinkAccent,
+                        primary: Colors.orange,
                         minimumSize: const Size.fromHeight(50),
                         shadowColor: Colors.grey.withOpacity(0.4),
                         elevation: 24, // e
@@ -202,7 +231,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                     ),
                     child: const Text('Register',
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.white, fontSize: 18, letterSpacing: 1, fontWeight: FontWeight.w700),
                     ),
                   );
                 },
@@ -224,9 +253,9 @@ class _RegisterPageState extends State<RegisterPage> {
                 child: RichText(
                   text: const TextSpan(
                     children: <TextSpan>[
-                      TextSpan(text: 'Already a member? ', style: TextStyle(color: Colors.white)),
+                      TextSpan(text: 'Already have an account ? ', style: TextStyle(color: Colors.black)),
                       TextSpan(text: 'Log In', style: TextStyle(
-                        color: Colors.pinkAccent,
+                        color: Colors.orange,
                         fontWeight: FontWeight.w700,
                       )),
                     ],
@@ -236,7 +265,7 @@ class _RegisterPageState extends State<RegisterPage> {
             ],
           ),
         ),
-      ),
+  ],),
     );
   }
 }

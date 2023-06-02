@@ -10,6 +10,7 @@ import 'package:fic4_tugas_akhir_ekatalog/data/localsources/auth_local_storage.d
 import 'package:fic4_tugas_akhir_ekatalog/presentation/pages/login_page.dart';
 import 'package:fic4_tugas_akhir_ekatalog/presentation/pages/register_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'bloc/login/login_bloc.dart';
 import 'presentation/pages/home_page.dart';

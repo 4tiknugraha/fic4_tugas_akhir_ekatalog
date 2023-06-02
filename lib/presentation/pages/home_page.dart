@@ -32,12 +32,13 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Profile',
+        title: const Text('Hi Farel',
          style: TextStyle(
-          color: Color(0xff1f005c),
+          color: Colors.black,
+          // color: Color(0xff1f005c),
           fontStyle: FontStyle.normal,
           fontWeight: FontWeight.w900,
-          fontSize: 45,
+          fontSize: 18,
           ),
         ),
         actions: [
@@ -86,16 +87,17 @@ class _HomePageState extends State<HomePage> {
                 return ListView.builder(itemBuilder: ((context, index) {
                   final product = state.listProduct.reversed.toList()[index];
                   return Card(
-                    color: Colors.pinkAccent,
+                    color: const Color(0xfffeebdd),
                     child: ListTile(
-                      leading: CircleAvatar(child: Text('${product.price}')),
-                      title: Text(product.title ?? '-', style: const TextStyle(color: Colors.white),),
+                      leading: const CircleAvatar( backgroundImage: NetworkImage('https://s3.o7planning.com/images/boy-128.png'),
+                      backgroundColor: Colors.blue,
+                      // backgroundColor: Color(0xfff7924a),
+                      ),
+                      title: Text(product.title ?? '-', style: const TextStyle(color: Colors.black,fontWeight: FontWeight.w700,fontSize: 18),),
                       subtitle: Text(product.description ?? '-',
-                      style: const TextStyle(color: Colors.white,
-
-
+                      style: const TextStyle(color: Colors.black),
                       ),
-                      ),
+                      trailing: Text('Rp.${product.price}', style: const TextStyle(color: Color(0xffd07d42),fontWeight: FontWeight.w700),)
                     ),
                   );
                 }));
@@ -185,7 +187,7 @@ class _HomePageState extends State<HomePage> {
                 );
               });
         },
-        child: const Icon(Icons.add),
+        child: Icon(Icons.add,color: Colors.blue.shade400),
       ),
     );
   }
