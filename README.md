@@ -1,16 +1,15 @@
-# fic4_tugas_akhir_ekatalog
+# Tugas Final e-katalog
 
-A new Flutter project.
+Tampilan e-katalog
 
-## Getting Started
+## E-Katalog
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+<img src="https://github.com/4tiknugraha/fic4_tugas_akhir_ekatalog/assets/38272198/6a525e2a-d4da-467c-9565-f4c1bbaca274" width=35%>
+<img src="https://github.com/4tiknugraha/fic4_tugas_akhir_ekatalog/assets/38272198/02f18cb0-3484-481a-821f-322d473b45ee" width=35%>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img src="https://github.com/4tiknugraha/fic4_tugas_akhir_ekatalog/assets/38272198/ed8e81ca-1fcd-47d7-900a-2edf37b149f1" width=35%>
+<img src="https://github.com/4tiknugraha/fic4_tugas_akhir_ekatalog/assets/38272198/06262118-054d-46df-b4a4-2c88c3567263" width=35%>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="https://github.com/4tiknugraha/fic4_tugas_akhir_ekatalog/assets/38272198/f00ff180-3fe6-427d-81c9-876d82a117a5" width=35%>
+<img src="https://github.com/4tiknugraha/fic4_tugas_akhir_ekatalog/assets/38272198/e2b123bc-e187-48ce-b633-85149d59ccca" width=35%>
